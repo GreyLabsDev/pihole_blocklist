@@ -1,0 +1,132 @@
+# Mail.ru Ads
+||ad.mail.ru^
+
+# RuTarget (Rambler/RuTarget DSP)
+||rutarget.ru^
+
+# BetweenDigital — рекламная сеть
+||betweendigital.com^
+
+# VideoNow — видеореклама
+||videonow.ru^
+
+# Hybrid.ai — programmatic-платформа (несколько субдоменов: bobid-ip, fpf, ssp)
+||hybrid.ai^
+
+# SMI2 — нативная реклама
+||smi2.ru^
+
+# Buzzoola — видео/баннерная реклама (exchange.buzzoola.com, tube.buzzoola.com)
+||buzzoola.com^
+
+# Gnezdo — рекламная сеть
+||gnezdo.ru^
+
+# skcrtxr.com — рекламный grid/bidder (grid, hb-bidder, cdn субдомены)
+||skcrtxr.com^
+
+# Bumlam — header bidding (hb.bumlam.com → Yandex HB)
+||bumlam.com^
+
+# Adriver — рекламная платформа (pb.adriver.ru, content.adriver.ru)
+||adriver.ru^
+
+# AdHigh — RTB (px.adhigh.net)
+||adhigh.net^
+
+# LinkSSP — SSP-платформа
+||linkssp.ru^
+
+# OhMy.bid — SSP
+||ohmy.bid^
+
+# Sape RTB — биржа ссылок/рекламы (ssp-rtb.sape.ru, cdn-rtb.sape.ru)
+||ssp-rtb.sape.ru^
+||cdn-rtb.sape.ru^
+
+# AL-AdTech — SSP
+||al-adtech.com^
+
+# BidVol — SSP (ssp.bidvol.com)
+||bidvol.com^
+
+# OTM-R — Yandex HB партнёр (yhb.p.otm-r.com)
+||otm-r.com^
+
+# Yandex AdFox — рекламная платформа Яндекса (ads.adfox.ru)
+# ВНИМАНИЕ: блокирует только adfox.ru, не всё yandex.ru
+||adfox.ru^
+
+# AIO Media — рекламная платформа (api.aio.media, static.aio.media)
+||aio.media^
+
+# Weborama — французская ad-tech платформа, поведенческий таргетинг
+||weborama.fr^
+
+# Curator.pro — контентные рекомендации (рекламный формат)
+||curator.pro^
+
+# MediaToday — RTB-платформа (запросы к /core/rtb/hb/bid)
+# ВНИМАНИЕ: также является новостным агрегатором, оцените нужность блокировки
+||mediatoday.ru^
+
+# meatydime.com — подозрительный домен, обнаружен в HTML-разметке [H]
+||meatydime.com^
+
+# Acint — поведенческий таргетинг / fingerprinting [H] [!AdBlock пропустил из разметки]
+||acint.net^
+
+# ============================================================
+# РАЗДЕЛ 2 — Аналитика и трекинг
+# (не показывают рекламу, но собирают данные о поведении)
+# [!] = обошли AdBlock на сетевом уровне (приоритетно блокировать в Pi-hole)
+# ============================================================
+
+# Yandex Metrika — счётчик посещений [H] (в разметке обоих HTML)
+||mc.yandex.ru^
+||metrika.yandex.ru^
+
+# Google Analytics [!] — обошёл AdBlock на сетевом уровне!
+||analytics.google.com^
+||www.google-analytics.com^
+
+# Google Tag Manager — оркестратор трекеров [H]
+||www.googletagmanager.com^
+
+# Google AdSense [H]
+||pagead2.googlesyndication.com^
+
+# LiveInternet / Yadro — счётчик [H] (в разметке обоих HTML)
+||counter.yadro.ru^
+||www.liveinternet.ru^
+
+# SendSay — email-маркетинг / push [!] — обошёл AdBlock на сетевом уровне! [H]
+||sendsay.ru^
+
+# Orphus — сбор опечаток [H]
+# ||orphus.ru^
+
+# ============================================================
+# ИТОГО:
+#   Раздел 1 (реклама/RTB):  22 правила
+#   Раздел 2 (аналитика):     9 правил
+#   Итого:                   31 правило
+#
+# [!] Домены, обошедшие AdBlock (2): sendsay.ru, www.google-analytics.com
+# [H] Домены в HTML-разметке (AdBlock блокирует только сетевой запрос,
+#     но тег в HTML остаётся — Pi-hole нужен для полной блокировки)
+#
+# Дополнительно: см. pihole-regex-3dnews.txt для regex-правил
+#
+# Домены НЕ включённые в блокировку (легитимный контент):
+#   3dnews.ru          — целевой сайт
+#   yandex.ru          — поиск/почта (блокировка ломает сервисы)
+#   yastatic.net       — CDN Яндекса для статики
+#   avatars.mds.yandex.net / storage.mds.yandex.net — медиа-CDN
+#   vk.com / ok.ru     — социальные кнопки (на ваше усмотрение)
+#   t.me / telegram.me — Telegram
+#   www.youtube.com    — видео
+#   dzen.ru            — Дзен
+#   www.xbox.com / feedbackportal.microsoft.com — Microsoft
+#   store.steampowered.com — Steam
+# ============================================================
